@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Welcome to Spin the Wheel</title>
+  <meta charset="UTF-8" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+  </style>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+  <div class="spinner-container-input-user">
+    <div class="spinner-container-input-user-wrapper">
+      <img src="./images/DanhSach-Title.png" class="image-list-prize" />
+      <textarea style="resize:none;" id="input-user" class="spinner-container-input-user-area" placeholder="ป้อนชื่อผู้โชคดี..." ></textarea>
+    </div>
+   <!--- <div style="padding: 10px; margin-top: 1px;">
+      <input id="result" style=" padding: 2px; width: 100%;" placeholder="Get result..." type="number" value="6" />
+    </div> --->
+  </div>
+  <div id="spin_the_wheel">
+    <canvas id="wheel" width="500" height="500"></canvas>
+    <div id="spin">สปิน</div>
+  </div>
+  <div class="back-wheel"></div>
+  <div id="spinner-container-prize" class="spinner-container-prize">
+    <div class="prize-card">
+       ยังไม่มีการจับรางวัล
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script defer src="src/index.js"></script>
+</body>
+
+</html>

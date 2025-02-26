@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: repeating-conic-gradient(#ffdd00 0 18deg, #ffc300 0 36deg);
+}
+
+/*
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #aaaaaa, #eeeeee);
+}*/
+
+#spin_the_wheel {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+#wheel {
+  display: block;
+}
+
+#spin {
+  font:
+    1.5em/0 "Lato",
+    sans-serif;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin: -15%;
+  background: #fff;
+  color: #fff;
+  box-shadow:
+    0 0 0 8px currentColor,
+    0 0px 15px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: 0.8s;
+}
+
+#spin::after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  border: 10px solid transparent;
+  border-bottom-color: currentColor;
+  border-top: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.back-wheel,
+.back-wheel:after {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.back-wheel {
+    width: 510px;
+    height: 510px;
+    background-color: #333;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+}
+
+.back-wheel:after {
+    content: "";
+    border: 5px dotted yellow;
+    width: 500px;
+    height: 500px;
+    animation: light .5s linear infinite;
+}
+
+@keyframes light {
+    0% {
+        border: 5px dotted yellow;
+        filter: hue-rotate(0);
+    }
+
+    50% {
+        border-color: 5px dotted pink;
+        filter: hue-rotate(130deg);
+    }
+
+    100% {
+        border-color: 5px dotted teal;
+        filter: hue-rotate(0);
+    }
+}
+
+.spinner-container-input-user-wrapper{
+  padding: 10px;
+  width: 340px;
+  background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+  border: 2px solid #E9580A;
+  border-radius: 30px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-container-input-user-area{
+  width: 320px;
+  background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+  border: none;
+  height: 460px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  padding: 10px;
+}
+
+.spinner-container-input-user{
+  position: absolute;
+  left: 100px;
+}
+
+.image-list-prize{
+  position: absolute;
+  width: 100%;
+  top: -14%;
+  left: 0%;
+}
+
+.spinner-container-prize{
+  min-width: 320px;
+  position: absolute;
+  right: 100px;
+}
+
+.prize-card{
+  width: 100%;
+  background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+  border: 2px solid #E9580A;
+  border-radius: 50px;
+}
+
+.prize-card{
+  padding: 5px 5px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: white;
+  animation: appearPrize 0.3s linear;
+}
+
+.prize-number{
+  padding: 0px 5px;
+  background-color: white;
+  font-size: 15px;
+  border-radius: 100%;
+  color: rgb(255, 111, 0);
+}
+
+.prize-card:not(:first-child){
+  margin-top: 5px;
+}
+
+@keyframes appearPrize {
+  from{
+      opacity: 0;
+  } to{
+      opacity: 1;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: red;
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5);
+}

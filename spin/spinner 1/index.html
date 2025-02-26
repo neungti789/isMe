@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <title>Spinner</title>
+</head>
+
+<body>
+    <div class="spinner-container">
+        <audio id="appear-sound" src="./audio//Hieu-ung-am-thanh-xuat-hien-www_nhacchuongvui_com.mp3"></audio>
+        <audio id="spinner-sound" src="./audio//Nhac-nen-boc-tham-trung-thuong-www_tiengdong_com.mp3"></audio>
+        <div class="spinner-container-wrapper">
+            <div class="spinner-container-input-user">
+                <div class="spinner-container-input-user-wrapper">
+                    <img src="./images/DanhSach-Title.png" class="image-list-prize" />
+                    <textarea style="resize:none;" id="input-user" class="spinner-container-input-user-area" placeholder="ป้อนชื่อผู้โชคดี..."></textarea>
+                </div>
+                <div style="padding: 10px; margin-top: 1px;">
+                    <label for="result">ป้อนจำนวนผลลัพธ์:</label>
+                    <input id="result" style="padding: 2px; width: 100%;" type="number" value="20"
+                        placeholder="ป้อนตัวเลข..." />
+                </div>
+            </div>
+            <div class="spinner-container-spin">
+                <div>
+                    <img src="./images/Title.png" style="width: 400px;" />
+                </div>
+                <img id="spin-image" src="./images/spinner.png" style="width: 400px;" />
+                <img id="spin-gif" src="./images/spinner.gif" style="width: 400px; display: none;" />
+                <div class="spinner-button-spin-wrapper">
+                    <div class="spinner-button-spin" id="button-spin">
+                        หมุนสุ่มรางวัล
+                    </div>
+                </div>
+            </div>
+            <div id="spinner-container-prize" class="spinner-container-prize">
+
+            </div>
+        </div>
+    </div>
+    <script src="./index.js">
+
+    </script>
+</body>
+
+</html>

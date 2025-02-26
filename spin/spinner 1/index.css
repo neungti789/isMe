@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
+    border-radius: 10px;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8b8b8;
+  }
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.spinner-container{
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    mix-blend-mode: soft-light;
+    background-color: rgb(3 3 3);
+    background-size: cover;
+}
+
+
+.spinner-container-wrapper{
+    min-height: calc(100vh - 140px);
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.spinner-container-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.spinner-container-input-user-wrapper{
+    padding: 10px;
+    width: 340px;
+    background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+    border: 2px solid #E9580A;
+    border-radius: 30px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-container-input-user-area{
+    width: 320px;
+    background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+    border: none;
+    height: 460px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    padding: 10px;
+}
+
+.spinner-container-prize{
+    min-width: 320px;
+}
+
+.prize-card{
+    width: 100%;
+    background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+    border: 2px solid #E9580A;
+    border-radius: 50px;
+}
+
+.spinner-button-spin{
+  cursor: pointer;
+  text-align: center;
+  width: 50%;
+  padding: 10px 5px;
+  color: white;
+  font-size: 18px;
+  background: linear-gradient(180deg, rgba(253, 23, 20, 1) 0%, rgba(233, 88, 10, 1) 100%);
+  border-radius: 20px;
+}
+
+.spinner-button-spin-wrapper{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.prize-card{
+    padding: 5px 5px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    color: white;
+    animation: appearPrize 0.3s linear;
+}
+
+.prize-number{
+    padding: 0px 5px;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 100%;
+    color: rgb(255, 111, 0);
+}
+
+.prize-card:not(:first-child){
+    margin-top: 5px;
+}
+
+@keyframes appearPrize {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+
+.spinner-container-input-user{
+    position: relative;
+}
+
+.image-list-prize{
+    position: absolute;
+    width: 100%;
+    top: -14%;
+    left: 0%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid gold;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    border-color: red;
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5);
+  }
