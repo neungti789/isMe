@@ -114,12 +114,23 @@ const getParticipantNames = (value) => {
 
 const rederUser = async (value) => {
   const data = getParticipantNames(value);
+  console.log(data);
+  
   try {
-    sectors = data.users.map((group, index) => ({
+    sectors = data.users.length > 0 ? data.users.map((group, index) => ({
       color: index % 2 === 0 ? "#FFBC03" : "#FF5A10", // Alternate colors
       text: "#333333",
       label: `${group}` // Label updated to "Group X"
-    }));
+    })) : [
+      { color: "#FFBC03", text: "#333333", label: "จับรางวัล" },
+      /*{ color: "#FF5A10", text: "#333333", label: "Prize draw" },
+      { color: "#FFBC03", text: "#333333", label: "Sweets" },
+      { color: "#FF5A10", text: "#333333", label: "Prize draw" },
+      { color: "#FFBC03", text: "#333333", label: "Sweets + Prize draw" },
+      { color: "#FF5A10", text: "#333333", label: "You lose" },
+      { color: "#FFBC03", text: "#333333", label: "Prize draw" },
+      { color: "#FF5A10", text: "#333333", label: "Sweets" },*/
+    ];
     //console.log(sectors);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     tot = sectors.length;
